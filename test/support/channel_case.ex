@@ -23,16 +23,18 @@ defmodule BlogWeb.ChannelCase do
       import Phoenix.ChannelTest
       import BlogWeb.ChannelCase
 
+      alias Ecto.Adapters.SQL.Sandbox
+
       # The default endpoint for testing
       @endpoint BlogWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Blog.Repo)
+    :ok = Sandbox.checkout(Blog.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Blog.Repo, {:shared, self()})
+      Sandbox.mode(Blog.Repo, {:shared, self()})
     end
 
     :ok
