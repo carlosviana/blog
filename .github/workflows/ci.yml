@@ -2,7 +2,7 @@ name: GithubActions Pipeline CI
 
 on: pull_request
 
-jobs: 
+jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
