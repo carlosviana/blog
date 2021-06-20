@@ -14,7 +14,7 @@ defmodule Blog.MixProject do
       files: ~w[mix.exs lib LICENSE.md README.md CHANGELOG.md],
       package: [
         maintainers: ["Carlos Viana"],
-        lisence: ["MIT"],
+        licences: ["MIT"],
         links: %{
           "Github" => @github_url
         }
