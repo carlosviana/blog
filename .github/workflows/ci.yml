@@ -1,9 +1,7 @@
 name: GithubActions Pipeline CI
 
 on: pull_request
-env:
-  MIX_ENV: test
-  DB_HOST: localhost
+
 jobs:
   lint:
     runs-on: ubuntu-latest
