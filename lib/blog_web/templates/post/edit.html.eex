@@ -1,0 +1,2 @@
+<h2>Editar Post</h2>
+<%= render "form.html", Map.put(assigns, :action, Routes.post_path(@conn, :update, @post))%>

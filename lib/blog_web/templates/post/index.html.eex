@@ -3,8 +3,12 @@
   <%= for post <- @posts do %>
   <li class="collection-item">
     <div><%= post.title %>
-      <a href="#!" class="secondary-content"><i class="material-icons green-text">edit</i></a>
-      <a href="#!" class="secondary-content"><i class="material-icons red-text">delete</i></a>
+      <%= link to: Routes.post_path(@conn, :edit, post.id), class: "secondary-content" do %>
+      <i class="material-icons green-text">edit</i>
+      <% end %>
+      <%= link to: Routes.post_path(@conn, :delete, post.id), method: :delete, data: [confirm: "Tem certeza?"], class: "secondary-content" do %>
+        <i class="material-icons red-text">delete</i>
+      <% end %>
       <%= link to: Routes.post_path(@conn, :show, post.id), class: "secondary-content" do %>
       <i class="material-icons blue-text">send</i>
       <% end %>
