@@ -9,3 +9,10 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+alias Blog.{Repo, Posts.Post}
+
+phoenix = %Post{title: "Proenix Framework", description: "Framework web para desenvolviemtno Elixir."}
+postgre = %Post{title: "PostgreSQL", description: "Banco de dados relacionao opensource"}
+
+Blog.Repo.insert!(phoenix)
+Blog.Repo.insert!(postgre)
