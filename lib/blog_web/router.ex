@@ -9,7 +9,6 @@ defmodule BlogWeb.Router do
     plug :put_secure_browser_headers
   end
 
-
   # coveralls-ignore-stop
 
   scope "/", BlogWeb do

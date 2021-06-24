@@ -13,13 +13,13 @@ defmodule Blog.PostTest do
   }
 
   def post_fixture(_attrs \\ %{}) do
-    {:ok, post } = Posts.create_post(@valid_post)
+    {:ok, post} = Posts.create_post(@valid_post)
     post
   end
 
   test "list_posts/0 return all posts" do
     post = post_fixture()
-    assert Posts.list_posts == [post]
+    assert Posts.list_posts() == [post]
   end
 
   test "get_post/0 return all posts" do
@@ -44,5 +44,4 @@ defmodule Blog.PostTest do
     assert post = Posts.delete_post(post.id)
     assert_raise Ecto.NoResultsError, fn -> Posts.get_post!(post.id) end
   end
-
 end
