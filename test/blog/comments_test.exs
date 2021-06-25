@@ -4,6 +4,8 @@ defmodule Blog.CommentsTest do
   """
   use Blog.DataCase
   alias Blog.Comments
+  import Blog.Fixtures
+
   describe "comments" do
     alias Blog.Comments.Comment
 
@@ -12,7 +14,7 @@ defmodule Blog.CommentsTest do
     @invalid_attrs %{content: nil}
 
     def comment_fixture(attrs \\ %{}) do
-      post = Blog.PostsTest.post_fixture()
+      post = post_fixture()
 
       att =
         attrs
@@ -36,14 +38,14 @@ defmodule Blog.CommentsTest do
     end
 
     test "create_comment/1 with valid data creates a comment" do
-      post = comment_fixture()
+      post = post_fixture()
 
       assert {:ok, %Comment{} = comment} = Comments.create_comment(post.id, @valid_attrs)
       assert comment.content == "some content"
     end
 
     test "create_comment/1 with invalid data returns error changeset" do
-      post = Blog.PostsTest.post_fixture()
+      post = post_fixture()
 
       assert {:error, %Ecto.Changeset{}} = Comments.create_comment(post.id, @invalid_attrs)
     end
