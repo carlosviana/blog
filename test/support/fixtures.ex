@@ -1,5 +1,4 @@
 defmodule Blog.Fixtures do
-
   alias Blog.Posts
 
   @valid_post %{
