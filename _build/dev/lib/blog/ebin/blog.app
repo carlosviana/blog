@@ -7,6 +7,7 @@
                              sobelow]},
               {description,"blog"},
               {modules,['Elixir.Blog','Elixir.Blog.Application',
+                        'Elixir.Blog.Comments','Elixir.Blog.Comments.Comment',
                         'Elixir.Blog.Posts','Elixir.Blog.Posts.Post',
                         'Elixir.Blog.Repo','Elixir.BlogWeb',
                         'Elixir.BlogWeb.Endpoint',

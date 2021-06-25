@@ -6,6 +6,7 @@
                              plug_cowboy,excoveralls]},
               {description,"blog"},
               {modules,['Elixir.Blog','Elixir.Blog.Application',
+                        'Elixir.Blog.Comments','Elixir.Blog.Comments.Comment',
                         'Elixir.Blog.DataCase','Elixir.Blog.Posts',
                         'Elixir.Blog.Posts.Post','Elixir.Blog.Repo',
                         'Elixir.BlogWeb','Elixir.BlogWeb.ChannelCase',
