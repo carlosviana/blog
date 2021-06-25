@@ -370,6 +370,28 @@ function find(y) {
           </li>
         
           <li>
+            <span class='cov high'>100</span>
+            <a href='#lib/blog/posts.ex'>
+              
+              
+                <span class='dirname'>lib/blog/</span>
+              
+              <span class='basename'>posts.ex</span>
+            </a>
+          </li>
+        
+          <li>
+            <span class='cov high'>100</span>
+            <a href='#lib/blog/posts/post.ex'>
+              
+              
+                <span class='dirname'>lib/blog/posts/</span>
+              
+              <span class='basename'>post.ex</span>
+            </a>
+          </li>
+        
+          <li>
             <span class='cov none'>100</span>
             <a href='#lib/blog/repo.ex'>
               
@@ -392,13 +414,24 @@ function find(y) {
           </li>
         
           <li>
-            <span class='cov terrible'>0</span>
+            <span class='cov high'>100</span>
             <a href='#lib/blog_web/controllers/page_controller.ex'>
               
               
                 <span class='dirname'>lib/blog_web/controllers/</span>
               
               <span class='basename'>page_controller.ex</span>
+            </a>
+          </li>
+        
+          <li>
+            <span class='cov high'>88.9</span>
+            <a href='#lib/blog_web/controllers/post_controller.ex'>
+              
+              
+                <span class='dirname'>lib/blog_web/controllers/</span>
+              
+              <span class='basename'>post_controller.ex</span>
             </a>
           </li>
         
@@ -425,7 +458,7 @@ function find(y) {
           </li>
         
           <li>
-            <span class='cov terrible'>0</span>
+            <span class='cov high'>100</span>
             <a href='#lib/blog_web/router.ex'>
               
               
@@ -436,7 +469,7 @@ function find(y) {
           </li>
         
           <li>
-            <span class='cov terrible'>0</span>
+            <span class='cov high'>100</span>
             <a href='#lib/blog_web/views/error_view.ex'>
               
               
@@ -469,7 +502,18 @@ function find(y) {
           </li>
         
           <li>
-            <span class='cov medium'>50</span>
+            <span class='cov none'>100</span>
+            <a href='#lib/blog_web/views/post_view.ex'>
+              
+              
+                <span class='dirname'>lib/blog_web/views/</span>
+              
+              <span class='basename'>post_view.ex</span>
+            </a>
+          </li>
+        
+          <li>
+            <span class='cov high'>100</span>
             <a href='#test/support/conn_case.ex'>
               
               
@@ -481,11 +525,11 @@ function find(y) {
         
       </div>
 
-      <div id='stats' class='low'>
-        <div class='percentage'>25</div>
-        <div class='sloc'>8</div>
-        <div class='hits'>7</div>
-        <div class='misses'>6</div>
+      <div id='stats' class='high'>
+        <div class='percentage'>93.9</div>
+        <div class='sloc'>33</div>
+        <div class='hits'>137</div>
+        <div class='misses'>2</div>
       </div>
       <div id='files'>
         
@@ -573,6 +617,376 @@ function find(y) {
                   
                       <tr>
                         <td class='line'>8</td>
+                        <td class='hits'></td>
+                        <td class='source'>end</td>
+                      </tr>
+                  
+                
+              </tbody>
+            </table>
+          </div>
+        
+          <div class='file'>
+            <h2 id='lib/blog/posts.ex'>lib/blog/posts.ex</h2>
+            <div id='stats' class='high'>
+              <div class='percentage'>100</div>
+              <div class='sloc'>5</div>
+              <div class='hits'>27</div>
+              <div class='misses'>0</div>
+            </div>
+            <table id='source'>
+              <thead>
+                <tr>
+                  <th>Line</th>
+                  <th>Hits</th>
+                  <th>Source</th>
+                </tr>
+              <tbody>
+                
+                  
+                      <tr>
+                        <td class='line'>0</td>
+                        <td class='hits'></td>
+                        <td class='source'>defmodule Blog.Posts do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>1</td>
+                        <td class='hits'></td>
+                        <td class='source'>  alias Blog.{Posts.Post, Repo}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>2</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>3</td>
+                        <td class='hits'>2</td>
+                        <td class='source'>  def list_posts, do: Repo.all(Post)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>4</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>5</td>
+                        <td class='hits'>9</td>
+                        <td class='source'>  def get_post!(id), do: Repo.get!(Post, id)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>6</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>7</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def create_post(attrs \\ %{}) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>8</td>
+                        <td class='hits'></td>
+                        <td class='source'>    %Post{}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>9</td>
+                        <td class='hits'></td>
+                        <td class='source'>    |&gt; Post.changeset(attrs)</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>10</td>
+                        <td class='hits'>12</td>
+                        <td class='source'>    |&gt; Repo.insert()</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>11</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>12</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>13</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def update_post(post, post_params) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>14</td>
+                        <td class='hits'></td>
+                        <td class='source'>    post</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>15</td>
+                        <td class='hits'></td>
+                        <td class='source'>    |&gt; Post.changeset(post_params)</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>16</td>
+                        <td class='hits'>3</td>
+                        <td class='source'>    |&gt; Repo.update()</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>17</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>18</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>19</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def delete_post(id) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>20</td>
+                        <td class='hits'></td>
+                        <td class='source'>    get_post!(id)</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>21</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>    |&gt; Repo.delete!()</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>22</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>23</td>
+                        <td class='hits'></td>
+                        <td class='source'>end</td>
+                      </tr>
+                  
+                
+              </tbody>
+            </table>
+          </div>
+        
+          <div class='file'>
+            <h2 id='lib/blog/posts/post.ex'>lib/blog/posts/post.ex</h2>
+            <div id='stats' class='high'>
+              <div class='percentage'>100</div>
+              <div class='sloc'>2</div>
+              <div class='hits'>36</div>
+              <div class='misses'>0</div>
+            </div>
+            <table id='source'>
+              <thead>
+                <tr>
+                  <th>Line</th>
+                  <th>Hits</th>
+                  <th>Source</th>
+                </tr>
+              <tbody>
+                
+                  
+                      <tr>
+                        <td class='line'>0</td>
+                        <td class='hits'></td>
+                        <td class='source'>defmodule Blog.Posts.Post do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>1</td>
+                        <td class='hits'></td>
+                        <td class='source'>  use Ecto.Schema</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>2</td>
+                        <td class='hits'></td>
+                        <td class='source'>  import Ecto.Changeset</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>3</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>4</td>
+                        <td class='hits'>19</td>
+                        <td class='source'>  schema &quot;posts&quot; do</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>5</td>
+                        <td class='hits'></td>
+                        <td class='source'>    field :title, :string</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>6</td>
+                        <td class='hits'></td>
+                        <td class='source'>    field :description, :string</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>7</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>8</td>
+                        <td class='hits'></td>
+                        <td class='source'>    timestamps()</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>9</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>10</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>11</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def changeset(post, attrs \\ %{}) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>12</td>
+                        <td class='hits'></td>
+                        <td class='source'>    post</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>13</td>
+                        <td class='hits'></td>
+                        <td class='source'>    |&gt; cast(attrs, [:title, :description])</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>14</td>
+                        <td class='hits'>17</td>
+                        <td class='source'>    |&gt; validate_required([:title, :description], message: &quot;Campo obrigatório!&quot;)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>15</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>16</td>
                         <td class='hits'></td>
                         <td class='source'>end</td>
                       </tr>
@@ -946,11 +1360,11 @@ function find(y) {
         
           <div class='file'>
             <h2 id='lib/blog_web/controllers/page_controller.ex'>lib/blog_web/controllers/page_controller.ex</h2>
-            <div id='stats' class='terrible'>
-              <div class='percentage'>0</div>
+            <div id='stats' class='high'>
+              <div class='percentage'>100</div>
               <div class='sloc'>1</div>
-              <div class='hits'>0</div>
-              <div class='misses'>1</div>
+              <div class='hits'>1</div>
+              <div class='misses'>0</div>
             </div>
             <table id='source'>
               <thead>
@@ -994,9 +1408,9 @@ function find(y) {
                   
                 
                   
-                      <tr class='miss'>
+                      <tr class='hit'>
                         <td class='line'>4</td>
-                        <td class='hits'>0</td>
+                        <td class='hits'>1</td>
                         <td class='source'>    render(conn, &quot;index.html&quot;)</td>
                       </tr>
                     
@@ -1012,6 +1426,499 @@ function find(y) {
                   
                       <tr>
                         <td class='line'>6</td>
+                        <td class='hits'></td>
+                        <td class='source'>end</td>
+                      </tr>
+                  
+                
+              </tbody>
+            </table>
+          </div>
+        
+          <div class='file'>
+            <h2 id='lib/blog_web/controllers/post_controller.ex'>lib/blog_web/controllers/post_controller.ex</h2>
+            <div id='stats' class='high'>
+              <div class='percentage'>88.9</div>
+              <div class='sloc'>18</div>
+              <div class='hits'>23</div>
+              <div class='misses'>2</div>
+            </div>
+            <table id='source'>
+              <thead>
+                <tr>
+                  <th>Line</th>
+                  <th>Hits</th>
+                  <th>Source</th>
+                </tr>
+              <tbody>
+                
+                  
+                      <tr>
+                        <td class='line'>0</td>
+                        <td class='hits'></td>
+                        <td class='source'>defmodule BlogWeb.PostController do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>1</td>
+                        <td class='hits'></td>
+                        <td class='source'>  use BlogWeb, :controller</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>2</td>
+                        <td class='hits'></td>
+                        <td class='source'>  alias Blog.{Posts, Posts.Post}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>3</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>4</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def index(conn, _params) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>5</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>    posts = Posts.list_posts()</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>6</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>7</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>    render(conn, &quot;index.html&quot;, posts: posts)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>8</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>9</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>10</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def show(conn, %{&quot;id&quot; =&gt; id}) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>11</td>
+                        <td class='hits'>3</td>
+                        <td class='source'>    post = Posts.get_post!(id)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>12</td>
+                        <td class='hits'>3</td>
+                        <td class='source'>    render(conn, &quot;show.html&quot;, post: post)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>13</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>14</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>15</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def new(conn, _params) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>16</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>    changeset = Post.changeset(%Post{})</td>
+                      </tr>
+                    
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>17</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>    render(conn, &quot;new.html&quot;, changeset: changeset)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>18</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>19</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>20</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def create(conn, %{&quot;post&quot; =&gt; post}) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>21</td>
+                        <td class='hits'>2</td>
+                        <td class='source'>    case Posts.create_post(post) do</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>22</td>
+                        <td class='hits'></td>
+                        <td class='source'>      {:ok, post} -&gt;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>23</td>
+                        <td class='hits'></td>
+                        <td class='source'>        conn</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>24</td>
+                        <td class='hits'></td>
+                        <td class='source'>        |&gt; put_flash(:info, &quot;Post gravado com sucesso!&quot;)</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>25</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>        |&gt; redirect(to: Routes.post_path(conn, :show, post))</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>26</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>27</td>
+                        <td class='hits'></td>
+                        <td class='source'>      {:error, changeset} -&gt;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>28</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>        render(conn, &quot;new.html&quot;, changeset: changeset)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>29</td>
+                        <td class='hits'></td>
+                        <td class='source'>    end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>30</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>31</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>32</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def edit(conn, %{&quot;id&quot; =&gt; id}) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>33</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>    post = Posts.get_post!(id)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>34</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>    changeset = Post.changeset(post)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>35</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>    render(conn, &quot;edit.html&quot;, changeset: changeset, post: post)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>36</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>37</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>38</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def update(conn, %{&quot;id&quot; =&gt; id, &quot;post&quot; =&gt; post_params}) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>39</td>
+                        <td class='hits'>2</td>
+                        <td class='source'>    post = Posts.get_post!(id)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>40</td>
+                        <td class='hits'>2</td>
+                        <td class='source'>    case Posts.update_post(post, post_params) do</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>41</td>
+                        <td class='hits'></td>
+                        <td class='source'>      {:ok, post} -&gt;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>42</td>
+                        <td class='hits'></td>
+                        <td class='source'>        conn</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>43</td>
+                        <td class='hits'></td>
+                        <td class='source'>        |&gt; put_flash(:info, &quot;Post gravado com sucesso!&quot;)</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>44</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>        |&gt; redirect(to: Routes.post_path(conn, :show, post))</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>45</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>46</td>
+                        <td class='hits'></td>
+                        <td class='source'>      {:error, changeset} -&gt;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>47</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>        render(conn, &quot;edit.html&quot;, changeset: changeset, post: post)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>48</td>
+                        <td class='hits'></td>
+                        <td class='source'>    end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>49</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>50</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>51</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def delete(conn, %{&quot;id&quot; =&gt; id}) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='miss'>
+                        <td class='line'>52</td>
+                        <td class='hits'>0</td>
+                        <td class='source'>    Posts.delete_post(id)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>53</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>54</td>
+                        <td class='hits'></td>
+                        <td class='source'>    conn</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>55</td>
+                        <td class='hits'></td>
+                        <td class='source'>    |&gt; put_flash(:info, &quot;Post foi deletado!&quot;)</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='miss'>
+                        <td class='line'>56</td>
+                        <td class='hits'>0</td>
+                        <td class='source'>    |&gt; redirect(to: Routes.post_path(conn, :index))</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>57</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>58</td>
                         <td class='hits'></td>
                         <td class='source'>end</td>
                       </tr>
@@ -1689,11 +2596,11 @@ function find(y) {
         
           <div class='file'>
             <h2 id='lib/blog_web/router.ex'>lib/blog_web/router.ex</h2>
-            <div id='stats' class='terrible'>
-              <div class='percentage'>0</div>
+            <div id='stats' class='high'>
+              <div class='percentage'>100</div>
               <div class='sloc'>2</div>
-              <div class='hits'>0</div>
-              <div class='misses'>2</div>
+              <div class='hits'>12</div>
+              <div class='misses'>0</div>
             </div>
             <table id='source'>
               <thead>
@@ -1729,9 +2636,9 @@ function find(y) {
                   
                 
                   
-                      <tr class='miss'>
+                      <tr class='hit'>
                         <td class='line'>3</td>
-                        <td class='hits'>0</td>
+                        <td class='hits'>11</td>
                         <td class='source'>  pipeline :browser do</td>
                       </tr>
                     
@@ -1796,7 +2703,7 @@ function find(y) {
                       <tr>
                         <td class='line'>11</td>
                         <td class='hits'></td>
-                        <td class='source'>  # coveralls-ignore-start</td>
+                        <td class='source'>  # coveralls-ignore-stop</td>
                       </tr>
                   
                 
@@ -1804,7 +2711,7 @@ function find(y) {
                       <tr>
                         <td class='line'>12</td>
                         <td class='hits'></td>
-                        <td class='source'>  pipeline :api do</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
@@ -1812,7 +2719,7 @@ function find(y) {
                       <tr>
                         <td class='line'>13</td>
                         <td class='hits'></td>
-                        <td class='source'>    plug :accepts, [&quot;json&quot;]</td>
+                        <td class='source'>  scope &quot;/&quot;, BlogWeb do</td>
                       </tr>
                   
                 
@@ -1820,7 +2727,7 @@ function find(y) {
                       <tr>
                         <td class='line'>14</td>
                         <td class='hits'></td>
-                        <td class='source'>  end</td>
+                        <td class='source'>    pipe_through :browser</td>
                       </tr>
                   
                 
@@ -1828,7 +2735,7 @@ function find(y) {
                       <tr>
                         <td class='line'>15</td>
                         <td class='hits'></td>
-                        <td class='source'>  # coveralls-ignore-stop</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
@@ -1836,7 +2743,7 @@ function find(y) {
                       <tr>
                         <td class='line'>16</td>
                         <td class='hits'></td>
-                        <td class='source'></td>
+                        <td class='source'>    resources &quot;/posts&quot;, PostController</td>
                       </tr>
                   
                 
@@ -1844,37 +2751,21 @@ function find(y) {
                       <tr>
                         <td class='line'>17</td>
                         <td class='hits'></td>
-                        <td class='source'>  scope &quot;/&quot;, BlogWeb do</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>18</td>
-                        <td class='hits'></td>
-                        <td class='source'>    pipe_through :browser</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>19</td>
-                        <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
                   
                 
                   
-                      <tr class='miss'>
-                        <td class='line'>20</td>
-                        <td class='hits'>0</td>
+                      <tr class='hit'>
+                        <td class='line'>18</td>
+                        <td class='hits'>1</td>
                         <td class='source'>    get &quot;/&quot;, PageController, :index</td>
                       </tr>
                     
                 
                   
                       <tr>
-                        <td class='line'>21</td>
+                        <td class='line'>19</td>
                         <td class='hits'></td>
                         <td class='source'>  end</td>
                       </tr>
@@ -1882,7 +2773,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>22</td>
+                        <td class='line'>20</td>
                         <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
@@ -1890,7 +2781,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>23</td>
+                        <td class='line'>21</td>
                         <td class='hits'></td>
                         <td class='source'>  # Other scopes may use custom stacks.</td>
                       </tr>
@@ -1898,7 +2789,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>24</td>
+                        <td class='line'>22</td>
                         <td class='hits'></td>
                         <td class='source'>  # scope &quot;/api&quot;, BlogWeb do</td>
                       </tr>
@@ -1906,7 +2797,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>25</td>
+                        <td class='line'>23</td>
                         <td class='hits'></td>
                         <td class='source'>  #   pipe_through :api</td>
                       </tr>
@@ -1914,7 +2805,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>26</td>
+                        <td class='line'>24</td>
                         <td class='hits'></td>
                         <td class='source'>  # end</td>
                       </tr>
@@ -1922,7 +2813,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>27</td>
+                        <td class='line'>25</td>
                         <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
@@ -1930,7 +2821,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>28</td>
+                        <td class='line'>26</td>
                         <td class='hits'></td>
                         <td class='source'>  # Enables LiveDashboard only for development</td>
                       </tr>
@@ -1938,7 +2829,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>29</td>
+                        <td class='line'>27</td>
                         <td class='hits'></td>
                         <td class='source'>  #</td>
                       </tr>
@@ -1946,7 +2837,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>30</td>
+                        <td class='line'>28</td>
                         <td class='hits'></td>
                         <td class='source'>  # If you want to use the LiveDashboard in production, you should put</td>
                       </tr>
@@ -1954,7 +2845,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>31</td>
+                        <td class='line'>29</td>
                         <td class='hits'></td>
                         <td class='source'>  # it behind authentication and allow only admins to access it.</td>
                       </tr>
@@ -1962,7 +2853,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>32</td>
+                        <td class='line'>30</td>
                         <td class='hits'></td>
                         <td class='source'>  # If your application does not have an admins-only section yet,</td>
                       </tr>
@@ -1970,7 +2861,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>33</td>
+                        <td class='line'>31</td>
                         <td class='hits'></td>
                         <td class='source'>  # you can use Plug.BasicAuth to set up some basic authentication</td>
                       </tr>
@@ -1978,7 +2869,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>34</td>
+                        <td class='line'>32</td>
                         <td class='hits'></td>
                         <td class='source'>  # as long as you are also using SSL (which you should anyway).</td>
                       </tr>
@@ -1986,7 +2877,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>35</td>
+                        <td class='line'>33</td>
                         <td class='hits'></td>
                         <td class='source'>  # coveralls-ignore-start</td>
                       </tr>
@@ -1994,7 +2885,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>36</td>
+                        <td class='line'>34</td>
                         <td class='hits'></td>
                         <td class='source'>  if Mix.env() in [:dev, :test] do</td>
                       </tr>
@@ -2002,7 +2893,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>37</td>
+                        <td class='line'>35</td>
                         <td class='hits'></td>
                         <td class='source'>    import Phoenix.LiveDashboard.Router</td>
                       </tr>
@@ -2010,7 +2901,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>38</td>
+                        <td class='line'>36</td>
                         <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
@@ -2018,7 +2909,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>39</td>
+                        <td class='line'>37</td>
                         <td class='hits'></td>
                         <td class='source'>    scope &quot;/&quot; do</td>
                       </tr>
@@ -2026,7 +2917,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>40</td>
+                        <td class='line'>38</td>
                         <td class='hits'></td>
                         <td class='source'>      pipe_through :browser</td>
                       </tr>
@@ -2034,7 +2925,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>41</td>
+                        <td class='line'>39</td>
                         <td class='hits'></td>
                         <td class='source'>      live_dashboard &quot;/dashboard&quot;, metrics: BlogWeb.Telemetry</td>
                       </tr>
@@ -2042,7 +2933,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>42</td>
+                        <td class='line'>40</td>
                         <td class='hits'></td>
                         <td class='source'>    end</td>
                       </tr>
@@ -2050,7 +2941,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>43</td>
+                        <td class='line'>41</td>
                         <td class='hits'></td>
                         <td class='source'>  end</td>
                       </tr>
@@ -2058,7 +2949,15 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>44</td>
+                        <td class='line'>42</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>43</td>
                         <td class='hits'></td>
                         <td class='source'>  # coveralls-ignore-stop</td>
                       </tr>
@@ -2066,7 +2965,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>45</td>
+                        <td class='line'>44</td>
                         <td class='hits'></td>
                         <td class='source'>end</td>
                       </tr>
@@ -2078,11 +2977,11 @@ function find(y) {
         
           <div class='file'>
             <h2 id='lib/blog_web/views/error_view.ex'>lib/blog_web/views/error_view.ex</h2>
-            <div id='stats' class='terrible'>
-              <div class='percentage'>0</div>
+            <div id='stats' class='high'>
+              <div class='percentage'>100</div>
               <div class='sloc'>1</div>
-              <div class='hits'>0</div>
-              <div class='misses'>1</div>
+              <div class='hits'>2</div>
+              <div class='misses'>0</div>
             </div>
             <table id='source'>
               <thead>
@@ -2198,9 +3097,9 @@ function find(y) {
                   
                 
                   
-                      <tr class='miss'>
+                      <tr class='hit'>
                         <td class='line'>13</td>
-                        <td class='hits'>0</td>
+                        <td class='hits'>2</td>
                         <td class='source'>    Phoenix.Controller.status_message_from_template(template)</td>
                       </tr>
                     
@@ -2316,12 +3215,57 @@ function find(y) {
           </div>
         
           <div class='file'>
+            <h2 id='lib/blog_web/views/post_view.ex'>lib/blog_web/views/post_view.ex</h2>
+            <div id='stats' class='none'>
+              <div class='percentage'>100</div>
+              <div class='sloc'>0</div>
+              <div class='hits'>0</div>
+              <div class='misses'>0</div>
+            </div>
+            <table id='source'>
+              <thead>
+                <tr>
+                  <th>Line</th>
+                  <th>Hits</th>
+                  <th>Source</th>
+                </tr>
+              <tbody>
+                
+                  
+                      <tr>
+                        <td class='line'>0</td>
+                        <td class='hits'></td>
+                        <td class='source'>defmodule BlogWeb.PostView do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>1</td>
+                        <td class='hits'></td>
+                        <td class='source'>  use BlogWeb, :view</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>2</td>
+                        <td class='hits'></td>
+                        <td class='source'>end</td>
+                      </tr>
+                  
+                
+              </tbody>
+            </table>
+          </div>
+        
+          <div class='file'>
             <h2 id='test/support/conn_case.ex'>test/support/conn_case.ex</h2>
-            <div id='stats' class='medium'>
-              <div class='percentage'>50</div>
+            <div id='stats' class='high'>
+              <div class='percentage'>100</div>
               <div class='sloc'>4</div>
-              <div class='hits'>7</div>
-              <div class='misses'>2</div>
+              <div class='hits'>36</div>
+              <div class='misses'>0</div>
             </div>
             <table id='source'>
               <thead>
@@ -2480,21 +3424,29 @@ function find(y) {
                       <tr>
                         <td class='line'>18</td>
                         <td class='hits'></td>
+                        <td class='source'>  alias Ecto.Adapters.SQL.Sandbox</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>19</td>
+                        <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
                   
                 
                   
                       <tr class='hit'>
-                        <td class='line'>19</td>
-                        <td class='hits'>4</td>
+                        <td class='line'>20</td>
+                        <td class='hits'>5</td>
                         <td class='source'>  using do</td>
                       </tr>
                     
                 
                   
                       <tr>
-                        <td class='line'>20</td>
+                        <td class='line'>21</td>
                         <td class='hits'></td>
                         <td class='source'>    quote do</td>
                       </tr>
@@ -2502,7 +3454,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>21</td>
+                        <td class='line'>22</td>
                         <td class='hits'></td>
                         <td class='source'>      # Import conveniences for testing with connections</td>
                       </tr>
@@ -2510,7 +3462,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>22</td>
+                        <td class='line'>23</td>
                         <td class='hits'></td>
                         <td class='source'>      import Plug.Conn</td>
                       </tr>
@@ -2518,7 +3470,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>23</td>
+                        <td class='line'>24</td>
                         <td class='hits'></td>
                         <td class='source'>      import Phoenix.ConnTest</td>
                       </tr>
@@ -2526,7 +3478,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>24</td>
+                        <td class='line'>25</td>
                         <td class='hits'></td>
                         <td class='source'>      import BlogWeb.ConnCase</td>
                       </tr>
@@ -2534,17 +3486,9 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>25</td>
-                        <td class='hits'></td>
-                        <td class='source'></td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
                         <td class='line'>26</td>
                         <td class='hits'></td>
-                        <td class='source'>      alias BlogWeb.Router.Helpers, as: Routes</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
@@ -2552,7 +3496,7 @@ function find(y) {
                       <tr>
                         <td class='line'>27</td>
                         <td class='hits'></td>
-                        <td class='source'>      alias Ecto.Adapters.SQL</td>
+                        <td class='source'>      alias BlogWeb.Router.Helpers, as: Routes</td>
                       </tr>
                   
                 
@@ -2560,7 +3504,7 @@ function find(y) {
                       <tr>
                         <td class='line'>28</td>
                         <td class='hits'></td>
-                        <td class='source'></td>
+                        <td class='source'>      alias Ecto.Adapters.SQL</td>
                       </tr>
                   
                 
@@ -2568,7 +3512,7 @@ function find(y) {
                       <tr>
                         <td class='line'>29</td>
                         <td class='hits'></td>
-                        <td class='source'>      # The default endpoint for testing</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
@@ -2576,7 +3520,7 @@ function find(y) {
                       <tr>
                         <td class='line'>30</td>
                         <td class='hits'></td>
-                        <td class='source'>      @endpoint BlogWeb.Endpoint</td>
+                        <td class='source'>      # The default endpoint for testing</td>
                       </tr>
                   
                 
@@ -2584,7 +3528,7 @@ function find(y) {
                       <tr>
                         <td class='line'>31</td>
                         <td class='hits'></td>
-                        <td class='source'>    end</td>
+                        <td class='source'>      @endpoint BlogWeb.Endpoint</td>
                       </tr>
                   
                 
@@ -2592,7 +3536,7 @@ function find(y) {
                       <tr>
                         <td class='line'>32</td>
                         <td class='hits'></td>
-                        <td class='source'>  end</td>
+                        <td class='source'>    end</td>
                       </tr>
                   
                 
@@ -2600,7 +3544,7 @@ function find(y) {
                       <tr>
                         <td class='line'>33</td>
                         <td class='hits'></td>
-                        <td class='source'></td>
+                        <td class='source'>  end</td>
                       </tr>
                   
                 
@@ -2608,45 +3552,53 @@ function find(y) {
                       <tr>
                         <td class='line'>34</td>
                         <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>35</td>
+                        <td class='hits'></td>
                         <td class='source'>  setup tags do</td>
                       </tr>
                   
                 
                   
                       <tr class='hit'>
-                        <td class='line'>35</td>
-                        <td class='hits'>3</td>
+                        <td class='line'>36</td>
+                        <td class='hits'>11</td>
                         <td class='source'>    :ok = Sandbox.checkout(Blog.Repo)</td>
                       </tr>
                     
                 
                   
                       <tr>
-                        <td class='line'>36</td>
+                        <td class='line'>37</td>
                         <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
                   
                 
                   
-                      <tr class='miss'>
-                        <td class='line'>37</td>
-                        <td class='hits'>0</td>
+                      <tr class='hit'>
+                        <td class='line'>38</td>
+                        <td class='hits'>11</td>
                         <td class='source'>    unless tags[:async] do</td>
                       </tr>
                     
                 
                   
-                      <tr class='miss'>
-                        <td class='line'>38</td>
-                        <td class='hits'>0</td>
+                      <tr class='hit'>
+                        <td class='line'>39</td>
+                        <td class='hits'>9</td>
                         <td class='source'>      Sandbox.mode(Blog.Repo, {:shared, self()})</td>
                       </tr>
                     
                 
                   
                       <tr>
-                        <td class='line'>39</td>
+                        <td class='line'>40</td>
                         <td class='hits'></td>
                         <td class='source'>    end</td>
                       </tr>
@@ -2654,7 +3606,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>40</td>
+                        <td class='line'>41</td>
                         <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
@@ -2662,7 +3614,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>41</td>
+                        <td class='line'>42</td>
                         <td class='hits'></td>
                         <td class='source'>    {:ok, conn: Phoenix.ConnTest.build_conn()}</td>
                       </tr>
@@ -2670,7 +3622,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>42</td>
+                        <td class='line'>43</td>
                         <td class='hits'></td>
                         <td class='source'>  end</td>
                       </tr>
@@ -2678,7 +3630,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>43</td>
+                        <td class='line'>44</td>
                         <td class='hits'></td>
                         <td class='source'>end</td>
                       </tr>
