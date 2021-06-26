@@ -12,7 +12,6 @@ import "../node_modules/materialize-css/dist/js/materialize";
 //
 import {Socket} from "phoenix"
 import socket from "./socket"
-//
 import "phoenix_html"
 
 document.addEventListener('DOMContentLoaded', function() {
