@@ -50,6 +50,8 @@ defmodule Blog.Comments do
 
   """
   def create_comment(post_id, attrs \\ %{}) do
+    IO.inspect(attrs)
+
     Blog.Posts.get_post!(post_id)
     |> Ecto.build_assoc(:comments)
     |> change_comment(attrs)

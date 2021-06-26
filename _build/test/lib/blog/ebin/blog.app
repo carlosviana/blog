@@ -11,6 +11,7 @@
                         'Elixir.Blog.Posts','Elixir.Blog.Posts.Post',
                         'Elixir.Blog.Repo','Elixir.BlogWeb',
                         'Elixir.BlogWeb.ChannelCase',
+                        'Elixir.BlogWeb.CommentsChannel',
                         'Elixir.BlogWeb.ConnCase','Elixir.BlogWeb.Endpoint',
                         'Elixir.BlogWeb.ErrorHelpers',
                         'Elixir.BlogWeb.ErrorView','Elixir.BlogWeb.Gettext',
@@ -21,7 +22,8 @@
                         'Elixir.BlogWeb.PostView','Elixir.BlogWeb.Router',
                         'Elixir.BlogWeb.Router.Helpers',
                         'Elixir.BlogWeb.Telemetry',
-                        'Elixir.BlogWeb.UserSocket']},
+                        'Elixir.BlogWeb.UserSocket',
+                        'Elixir.Jason.Encoder.Blog.Comments.Comment']},
               {registered,[]},
               {vsn,"0.1.0"},
               {mod,{'Elixir.Blog.Application',[]}}]}.
