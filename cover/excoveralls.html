@@ -425,7 +425,7 @@ function find(y) {
           </li>
         
           <li>
-            <span class='cov low'>28.6</span>
+            <span class='cov high'>100</span>
             <a href='#lib/blog_web/channels/comments_channel.ex'>
               
               
@@ -570,10 +570,10 @@ function find(y) {
       </div>
 
       <div id='stats' class='high'>
-        <div class='percentage'>90.4</div>
-        <div class='sloc'>52</div>
-        <div class='hits'>277</div>
-        <div class='misses'>5</div>
+        <div class='percentage'>100</div>
+        <div class='sloc'>51</div>
+        <div class='hits'>286</div>
+        <div class='misses'>0</div>
       </div>
       <div id='files'>
         
@@ -674,8 +674,8 @@ function find(y) {
             <h2 id='lib/blog/comments.ex'>lib/blog/comments.ex</h2>
             <div id='stats' class='high'>
               <div class='percentage'>100</div>
-              <div class='sloc'>7</div>
-              <div class='hits'>32</div>
+              <div class='sloc'>6</div>
+              <div class='hits'>26</div>
               <div class='misses'>0</div>
             </div>
             <table id='source'>
@@ -1104,24 +1104,8 @@ function find(y) {
                   
                 
                   
-                      <tr class='hit'>
+                      <tr>
                         <td class='line'>52</td>
-                        <td class='hits'>8</td>
-                        <td class='source'>    IO.inspect(attrs)</td>
-                      </tr>
-                    
-                
-                  
-                      <tr>
-                        <td class='line'>53</td>
-                        <td class='hits'></td>
-                        <td class='source'></td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>54</td>
                         <td class='hits'></td>
                         <td class='source'>    Blog.Posts.get_post!(post_id)</td>
                       </tr>
@@ -1129,7 +1113,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>55</td>
+                        <td class='line'>53</td>
                         <td class='hits'></td>
                         <td class='source'>    |&gt; Ecto.build_assoc(:comments)</td>
                       </tr>
@@ -1137,7 +1121,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>56</td>
+                        <td class='line'>54</td>
                         <td class='hits'></td>
                         <td class='source'>    |&gt; change_comment(attrs)</td>
                       </tr>
@@ -1145,15 +1129,15 @@ function find(y) {
                 
                   
                       <tr class='hit'>
-                        <td class='line'>57</td>
-                        <td class='hits'>8</td>
+                        <td class='line'>55</td>
+                        <td class='hits'>9</td>
                         <td class='source'>    |&gt; Repo.insert()</td>
                       </tr>
                     
                 
                   
                       <tr>
-                        <td class='line'>58</td>
+                        <td class='line'>56</td>
                         <td class='hits'></td>
                         <td class='source'>  end</td>
                       </tr>
@@ -1161,7 +1145,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>59</td>
+                        <td class='line'>57</td>
                         <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
@@ -1169,7 +1153,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>60</td>
+                        <td class='line'>58</td>
                         <td class='hits'></td>
                         <td class='source'>  @doc &quot;&quot;&quot;</td>
                       </tr>
@@ -1177,9 +1161,25 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>61</td>
+                        <td class='line'>59</td>
                         <td class='hits'></td>
                         <td class='source'>  Updates a comment.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>60</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>61</td>
+                        <td class='hits'></td>
+                        <td class='source'>  ## Examples</td>
                       </tr>
                   
                 
@@ -1195,7 +1195,7 @@ function find(y) {
                       <tr>
                         <td class='line'>63</td>
                         <td class='hits'></td>
-                        <td class='source'>  ## Examples</td>
+                        <td class='source'>      iex&gt; update_comment(comment, %{field: new_value})</td>
                       </tr>
                   
                 
@@ -1203,7 +1203,7 @@ function find(y) {
                       <tr>
                         <td class='line'>64</td>
                         <td class='hits'></td>
-                        <td class='source'></td>
+                        <td class='source'>      {:ok, %Comment{}}</td>
                       </tr>
                   
                 
@@ -1211,7 +1211,7 @@ function find(y) {
                       <tr>
                         <td class='line'>65</td>
                         <td class='hits'></td>
-                        <td class='source'>      iex&gt; update_comment(comment, %{field: new_value})</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
@@ -1219,7 +1219,7 @@ function find(y) {
                       <tr>
                         <td class='line'>66</td>
                         <td class='hits'></td>
-                        <td class='source'>      {:ok, %Comment{}}</td>
+                        <td class='source'>      iex&gt; update_comment(comment, %{field: bad_value})</td>
                       </tr>
                   
                 
@@ -1227,7 +1227,7 @@ function find(y) {
                       <tr>
                         <td class='line'>67</td>
                         <td class='hits'></td>
-                        <td class='source'></td>
+                        <td class='source'>      {:error, %Ecto.Changeset{}}</td>
                       </tr>
                   
                 
@@ -1235,7 +1235,7 @@ function find(y) {
                       <tr>
                         <td class='line'>68</td>
                         <td class='hits'></td>
-                        <td class='source'>      iex&gt; update_comment(comment, %{field: bad_value})</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
@@ -1243,7 +1243,7 @@ function find(y) {
                       <tr>
                         <td class='line'>69</td>
                         <td class='hits'></td>
-                        <td class='source'>      {:error, %Ecto.Changeset{}}</td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
                       </tr>
                   
                 
@@ -1251,7 +1251,7 @@ function find(y) {
                       <tr>
                         <td class='line'>70</td>
                         <td class='hits'></td>
-                        <td class='source'></td>
+                        <td class='source'>  def update_comment(%Comment{} = comment, attrs) do</td>
                       </tr>
                   
                 
@@ -1259,7 +1259,7 @@ function find(y) {
                       <tr>
                         <td class='line'>71</td>
                         <td class='hits'></td>
-                        <td class='source'>  &quot;&quot;&quot;</td>
+                        <td class='source'>    comment</td>
                       </tr>
                   
                 
@@ -1267,29 +1267,13 @@ function find(y) {
                       <tr>
                         <td class='line'>72</td>
                         <td class='hits'></td>
-                        <td class='source'>  def update_comment(%Comment{} = comment, attrs) do</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>73</td>
-                        <td class='hits'></td>
-                        <td class='source'>    comment</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>74</td>
-                        <td class='hits'></td>
                         <td class='source'>    |&gt; Comment.changeset(attrs)</td>
                       </tr>
                   
                 
                   
                       <tr class='hit'>
-                        <td class='line'>75</td>
+                        <td class='line'>73</td>
                         <td class='hits'>2</td>
                         <td class='source'>    |&gt; Repo.update()</td>
                       </tr>
@@ -1297,7 +1281,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>76</td>
+                        <td class='line'>74</td>
                         <td class='hits'></td>
                         <td class='source'>  end</td>
                       </tr>
@@ -1305,7 +1289,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>77</td>
+                        <td class='line'>75</td>
                         <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
@@ -1313,7 +1297,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>78</td>
+                        <td class='line'>76</td>
                         <td class='hits'></td>
                         <td class='source'>  @doc &quot;&quot;&quot;</td>
                       </tr>
@@ -1321,9 +1305,25 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>79</td>
+                        <td class='line'>77</td>
                         <td class='hits'></td>
                         <td class='source'>  Deletes a comment.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>78</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>79</td>
+                        <td class='hits'></td>
+                        <td class='source'>  ## Examples</td>
                       </tr>
                   
                 
@@ -1339,7 +1339,7 @@ function find(y) {
                       <tr>
                         <td class='line'>81</td>
                         <td class='hits'></td>
-                        <td class='source'>  ## Examples</td>
+                        <td class='source'>      iex&gt; delete_comment(comment)</td>
                       </tr>
                   
                 
@@ -1347,7 +1347,7 @@ function find(y) {
                       <tr>
                         <td class='line'>82</td>
                         <td class='hits'></td>
-                        <td class='source'></td>
+                        <td class='source'>      {:ok, %Comment{}}</td>
                       </tr>
                   
                 
@@ -1355,7 +1355,7 @@ function find(y) {
                       <tr>
                         <td class='line'>83</td>
                         <td class='hits'></td>
-                        <td class='source'>      iex&gt; delete_comment(comment)</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
@@ -1363,7 +1363,7 @@ function find(y) {
                       <tr>
                         <td class='line'>84</td>
                         <td class='hits'></td>
-                        <td class='source'>      {:ok, %Comment{}}</td>
+                        <td class='source'>      iex&gt; delete_comment(comment)</td>
                       </tr>
                   
                 
@@ -1371,7 +1371,7 @@ function find(y) {
                       <tr>
                         <td class='line'>85</td>
                         <td class='hits'></td>
-                        <td class='source'></td>
+                        <td class='source'>      {:error, %Ecto.Changeset{}}</td>
                       </tr>
                   
                 
@@ -1379,7 +1379,7 @@ function find(y) {
                       <tr>
                         <td class='line'>86</td>
                         <td class='hits'></td>
-                        <td class='source'>      iex&gt; delete_comment(comment)</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
@@ -1387,7 +1387,7 @@ function find(y) {
                       <tr>
                         <td class='line'>87</td>
                         <td class='hits'></td>
-                        <td class='source'>      {:error, %Ecto.Changeset{}}</td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
                       </tr>
                   
                 
@@ -1395,29 +1395,13 @@ function find(y) {
                       <tr>
                         <td class='line'>88</td>
                         <td class='hits'></td>
-                        <td class='source'></td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>89</td>
-                        <td class='hits'></td>
-                        <td class='source'>  &quot;&quot;&quot;</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>90</td>
-                        <td class='hits'></td>
                         <td class='source'>  def delete_comment(%Comment{} = comment) do</td>
                       </tr>
                   
                 
                   
                       <tr class='hit'>
-                        <td class='line'>91</td>
+                        <td class='line'>89</td>
                         <td class='hits'>1</td>
                         <td class='source'>    Repo.delete(comment)</td>
                       </tr>
@@ -1425,7 +1409,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>92</td>
+                        <td class='line'>90</td>
                         <td class='hits'></td>
                         <td class='source'>  end</td>
                       </tr>
@@ -1433,7 +1417,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>93</td>
+                        <td class='line'>91</td>
                         <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
@@ -1441,7 +1425,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>94</td>
+                        <td class='line'>92</td>
                         <td class='hits'></td>
                         <td class='source'>  @doc &quot;&quot;&quot;</td>
                       </tr>
@@ -1449,9 +1433,25 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>95</td>
+                        <td class='line'>93</td>
                         <td class='hits'></td>
                         <td class='source'>  Returns an `%Ecto.Changeset{}` for tracking comment changes.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>94</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>95</td>
+                        <td class='hits'></td>
+                        <td class='source'>  ## Examples</td>
                       </tr>
                   
                 
@@ -1467,7 +1467,7 @@ function find(y) {
                       <tr>
                         <td class='line'>97</td>
                         <td class='hits'></td>
-                        <td class='source'>  ## Examples</td>
+                        <td class='source'>      iex&gt; change_comment(comment)</td>
                       </tr>
                   
                 
@@ -1475,7 +1475,7 @@ function find(y) {
                       <tr>
                         <td class='line'>98</td>
                         <td class='hits'></td>
-                        <td class='source'></td>
+                        <td class='source'>      %Ecto.Changeset{data: %Comment{}}</td>
                       </tr>
                   
                 
@@ -1483,7 +1483,7 @@ function find(y) {
                       <tr>
                         <td class='line'>99</td>
                         <td class='hits'></td>
-                        <td class='source'>      iex&gt; change_comment(comment)</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
@@ -1491,7 +1491,7 @@ function find(y) {
                       <tr>
                         <td class='line'>100</td>
                         <td class='hits'></td>
-                        <td class='source'>      %Ecto.Changeset{data: %Comment{}}</td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
                       </tr>
                   
                 
@@ -1499,37 +1499,21 @@ function find(y) {
                       <tr>
                         <td class='line'>101</td>
                         <td class='hits'></td>
-                        <td class='source'></td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>102</td>
-                        <td class='hits'></td>
-                        <td class='source'>  &quot;&quot;&quot;</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>103</td>
-                        <td class='hits'></td>
                         <td class='source'>  def change_comment(%Comment{} = comment, attrs \\ %{}) do</td>
                       </tr>
                   
                 
                   
                       <tr class='hit'>
-                        <td class='line'>104</td>
-                        <td class='hits'>9</td>
+                        <td class='line'>102</td>
+                        <td class='hits'>10</td>
                         <td class='source'>    Comment.changeset(comment, attrs)</td>
                       </tr>
                     
                 
                   
                       <tr>
-                        <td class='line'>105</td>
+                        <td class='line'>103</td>
                         <td class='hits'></td>
                         <td class='source'>  end</td>
                       </tr>
@@ -1537,7 +1521,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>106</td>
+                        <td class='line'>104</td>
                         <td class='hits'></td>
                         <td class='source'>end</td>
                       </tr>
@@ -1552,7 +1536,7 @@ function find(y) {
             <div id='stats' class='high'>
               <div class='percentage'>100</div>
               <div class='sloc'>2</div>
-              <div class='hits'>36</div>
+              <div class='hits'>39</div>
               <div class='misses'>0</div>
             </div>
             <table id='source'>
@@ -1607,7 +1591,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>5</td>
-                        <td class='hits'>25</td>
+                        <td class='hits'>27</td>
                         <td class='source'>  schema &quot;comments&quot; do</td>
                       </tr>
                     
@@ -1687,7 +1671,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>15</td>
-                        <td class='hits'>11</td>
+                        <td class='hits'>12</td>
                         <td class='source'>    |&gt; validate_required([:content])</td>
                       </tr>
                     
@@ -1717,7 +1701,7 @@ function find(y) {
             <div id='stats' class='high'>
               <div class='percentage'>100</div>
               <div class='sloc'>6</div>
-              <div class='hits'>50</div>
+              <div class='hits'>53</div>
               <div class='misses'>0</div>
             </div>
             <table id='source'>
@@ -1788,7 +1772,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>7</td>
-                        <td class='hits'>19</td>
+                        <td class='hits'>20</td>
                         <td class='source'>  def get_post!(id), do: Repo.get!(Post, id)</td>
                       </tr>
                     
@@ -1804,7 +1788,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>9</td>
-                        <td class='hits'>1</td>
+                        <td class='hits'>2</td>
                         <td class='source'>  def get_post_with_comments!(id), do: Repo.get!(Post, id) |&gt; Repo.preload(:comments)</td>
                       </tr>
                     
@@ -1844,7 +1828,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>14</td>
-                        <td class='hits'>23</td>
+                        <td class='hits'>24</td>
                         <td class='source'>    |&gt; Repo.insert()</td>
                       </tr>
                     
@@ -1962,7 +1946,7 @@ function find(y) {
             <div id='stats' class='high'>
               <div class='percentage'>100</div>
               <div class='sloc'>2</div>
-              <div class='hits'>58</div>
+              <div class='hits'>60</div>
               <div class='misses'>0</div>
             </div>
             <table id='source'>
@@ -2025,7 +2009,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>6</td>
-                        <td class='hits'>30</td>
+                        <td class='hits'>31</td>
                         <td class='source'>  schema &quot;posts&quot; do</td>
                       </tr>
                     
@@ -2113,7 +2097,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>17</td>
-                        <td class='hits'>28</td>
+                        <td class='hits'>29</td>
                         <td class='source'>    |&gt; validate_required([:title, :description], message: &quot;Campo obrigatório!&quot;)</td>
                       </tr>
                     
@@ -2201,11 +2185,11 @@ function find(y) {
         
           <div class='file'>
             <h2 id='lib/blog_web/channels/comments_channel.ex'>lib/blog_web/channels/comments_channel.ex</h2>
-            <div id='stats' class='low'>
-              <div class='percentage'>28.6</div>
+            <div id='stats' class='high'>
+              <div class='percentage'>100</div>
               <div class='sloc'>7</div>
-              <div class='hits'>2</div>
-              <div class='misses'>5</div>
+              <div class='hits'>9</div>
+              <div class='misses'>0</div>
             </div>
             <table id='source'>
               <thead>
@@ -2251,7 +2235,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>4</td>
-                        <td class='hits'>1</td>
+                        <td class='hits'>2</td>
                         <td class='source'>    post = Blog.Posts.get_post_with_comments!(post_id)</td>
                       </tr>
                     
@@ -2259,7 +2243,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>5</td>
-                        <td class='hits'>1</td>
+                        <td class='hits'>2</td>
                         <td class='source'>    {:ok, %{comments: post.comments}, assign(socket, :post_id, post.id)}</td>
                       </tr>
                     
@@ -2297,17 +2281,17 @@ function find(y) {
                   
                 
                   
-                      <tr class='miss'>
+                      <tr class='hit'>
                         <td class='line'>10</td>
-                        <td class='hits'>0</td>
+                        <td class='hits'>1</td>
                         <td class='source'>    response =</td>
                       </tr>
                     
                 
                   
-                      <tr class='miss'>
+                      <tr class='hit'>
                         <td class='line'>11</td>
-                        <td class='hits'>0</td>
+                        <td class='hits'>1</td>
                         <td class='source'>      socket.assigns.post_id</td>
                       </tr>
                     
@@ -2329,9 +2313,9 @@ function find(y) {
                   
                 
                   
-                      <tr class='miss'>
+                      <tr class='hit'>
                         <td class='line'>14</td>
-                        <td class='hits'>0</td>
+                        <td class='hits'>1</td>
                         <td class='source'>    case response do</td>
                       </tr>
                     
@@ -2345,17 +2329,17 @@ function find(y) {
                   
                 
                   
-                      <tr class='miss'>
+                      <tr class='hit'>
                         <td class='line'>16</td>
-                        <td class='hits'>0</td>
+                        <td class='hits'>1</td>
                         <td class='source'>        broadcast!(socket, &quot;comments:#{socket.assigns.post_id}:new&quot;, %{comment: comment})</td>
                       </tr>
                     
                 
                   
-                      <tr class='miss'>
+                      <tr class='hit'>
                         <td class='line'>17</td>
-                        <td class='hits'>0</td>
+                        <td class='hits'>1</td>
                         <td class='source'>        {:reply, :ok, socket}</td>
                       </tr>
                     
@@ -2364,7 +2348,7 @@ function find(y) {
                       <tr>
                         <td class='line'>18</td>
                         <td class='hits'></td>
-                        <td class='source'>      {:error, changeset} -&gt; {:reply, {:error, %{errors: changeset}}}</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
@@ -2372,7 +2356,7 @@ function find(y) {
                       <tr>
                         <td class='line'>19</td>
                         <td class='hits'></td>
-                        <td class='source'>    end</td>
+                        <td class='source'>      {:error, changeset} -&gt;</td>
                       </tr>
                   
                 
@@ -2380,13 +2364,29 @@ function find(y) {
                       <tr>
                         <td class='line'>20</td>
                         <td class='hits'></td>
-                        <td class='source'>  end</td>
+                        <td class='source'>        {:reply, {:error, %{errors: changeset}}}</td>
                       </tr>
                   
                 
                   
                       <tr>
                         <td class='line'>21</td>
+                        <td class='hits'></td>
+                        <td class='source'>    end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>22</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>23</td>
                         <td class='hits'></td>
                         <td class='source'>end</td>
                       </tr>

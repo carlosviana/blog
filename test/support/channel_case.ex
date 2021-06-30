@@ -18,7 +18,6 @@ defmodule BlogWeb.ChannelCase do
   use ExUnit.CaseTemplate
   alias Ecto.Adapters.SQL.Sandbox
 
-
   using do
     quote do
       # Import conveniences for testing with channels
