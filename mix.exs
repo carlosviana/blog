@@ -73,7 +73,6 @@ defmodule Blog.MixProject do
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
       {:sobelow, "~> 0.8", only: :dev},
       {:excoveralls, "~> 0.10", only: :test},
-      {:ueberauth, "~> 0.6"},
       {:ueberauth_google, "~> 0.10"}
     ]
   end
