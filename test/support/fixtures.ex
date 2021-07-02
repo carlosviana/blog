@@ -7,7 +7,8 @@ defmodule Blog.Fixtures do
   }
 
   def post_fixture(_attrs \\ %{}) do
-    {:ok, post} = Posts.create_post(@valid_post)
+    user = Blog.Accounts.get_user!(1)
+    {:ok, post} = Posts.create_post(user, @valid_post)
     post
   end
 end
