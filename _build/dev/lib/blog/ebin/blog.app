@@ -19,6 +19,7 @@
                         'Elixir.BlogWeb.LayoutView',
                         'Elixir.BlogWeb.PageController',
                         'Elixir.BlogWeb.PageView',
+                        'Elixir.BlogWeb.Plug.RequireAuth',
                         'Elixir.BlogWeb.Plug.SetUser',
                         'Elixir.BlogWeb.PostController',
                         'Elixir.BlogWeb.PostView','Elixir.BlogWeb.Router',
