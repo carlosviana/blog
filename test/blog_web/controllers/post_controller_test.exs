@@ -27,6 +27,17 @@ defmodule BlogWeb.PostControllerTest do
     assert html_response(conn, 200) =~ "Novo post"
   end
 
+  test "entrar no formulario de criacao de posts sem usuario autenticado", %{conn: conn} do
+    conn =
+      conn
+      |> get(Routes.post_path(conn, :new))
+
+    assert redirected_to(conn) == Routes.page_path(conn, :index)
+
+    conn = get(conn, Routes.page_path(conn, :index))
+    assert html_response(conn, 200) =~ "Você precisa estar logado!"
+  end
+
   test "criar um posts através do formulario COM VALORES INVALIDOS", %{conn: conn} do
     conn =
       conn
@@ -73,10 +84,13 @@ defmodule BlogWeb.PostControllerTest do
 
       conn =
         conn
-        |> Plug.Test.init_test_session(user_id: 1)
+        |> Plug.Test.init_test_session(user_id: 2)
         |> get(Routes.post_path(conn, :edit, post))
 
-      assert html_response(conn, 200) =~ "Editar Post"
+      assert redirected_to(conn) == Routes.page_path(conn, :index)
+
+      conn = get(conn, Routes.page_path(conn, :index))
+      assert html_response(conn, 200) =~ "Você precisa ter permissão para essa operação!"
     end
 
     test "alterar um posts através do formulario", %{conn: conn, post: post} do
