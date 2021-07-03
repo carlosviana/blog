@@ -23,7 +23,7 @@ defmodule Blog.AccountsTest do
       token: "some updated token"
     }
     @invalid_attrs %{
-      email: nil,
+      email: "teste@teste.com",
       first_name: nil,
       image: nil,
       last_name: nil,
@@ -42,7 +42,7 @@ defmodule Blog.AccountsTest do
 
     test "list_users/0 returns all users" do
       user = user_fixture()
-      assert Accounts.list_users() == [user]
+      assert Accounts.list_users() |> Enum.count() == 3
     end
 
     test "get_user!/1 returns the user with given id" do
