@@ -9,14 +9,32 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
-alias Blog.{Repo, Posts.Post}
+alias Blog.{Accounts, Accounts.User, Posts, Posts.Post}
 
-phoenix = %Post{
-  title: "Proenix Framework",
-  description: "Framework web para desenvolviemtno Elixir."
+user = %{
+  email: "viana.mail@gmail.com",
+  first_name: nil,
+  image:
+    "https://lh3.googleusercontent.com/a-/AOh14GicsQvhdjupXGnxS-sHjwX30J0WHzaRBQViXwzcVw=s96-c",
+  last_name: nil,
+  provider: "google",
+  token:
+    "ya29.a0ARrdaM_Wl6LwzQLHH-flu3vmbeaStictJ1LI42QZN-sqGQYjVOGu180Rc8fd7SpvZ59N2pR2OcVLDyDjO-5zHy1ohHVt8WB0DPfJ4AF2BcQb78zSV2bY20gNfhxYAkKy760DzvMDvqLqSYTuPRJ-j82vikku"
 }
 
-postgre = %Post{title: "PostgreSQL", description: "Banco de dados relacionao opensource"}
+user_2 = %{
+  email: "viouyouy@gmail.com",
+  first_name: nil,
+  image:
+    "https://lh3.go4444ogleusercontent.com/a-/AOh14GicsQvhdjupXGnxS-sHjwX30J0WHzaRBQViXwzcVw=s96-c",
+  last_name: nil,
+  provider: "google",
+  token:
+    "ya29.a0hlhljhljhwzQLHH-flu3vmbeaStictJ1LI42QZN-sqGQYjVOGu180Rc8fd7SpvZ59N2pR2OcVLDyDjO-5zHy1ohHVt8WB0DPfJ4AF2BcQb78zSV2bY20gNfhxYAkKy760DzvMDvqLqSYTuPRJ-j82vikku"
+}
 
-Blog.Repo.insert!(phoenix)
-Blog.Repo.insert!(postgre)
+post = %{title: "PostgreSQL", description: "Banco de dados relacionao opensource"}
+
+{:ok, user} = Blog.Accounts.create_user(user)
+{:ok, user_2} = Blog.Accounts.create_user(user_2)
+{:ok, postgre} = Posts.create_post(user, post)
